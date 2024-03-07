@@ -3,7 +3,19 @@ We provide a competitive environment for red and blue aircrafts games, which inc
 
 ![fromework](assets/framework.jpg)
 
-## Install 
+## Install (update)
+```bash
+# Create conda env
+conda create -n jsbsim python=3.8
+conda activate jsbsim
+# Install pytorch (gpu version)
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+# Install dependencies
+pip install pymap3d jsbsim==1.1.6 gymnasium==0.26.2 shapely==1.7.1 geographiclib wandb icecream setproctitle
+# Initialize submodule (JSBSim repo)
+git submodule init; git submodule update
+```
+## Install (original)
 
 ```shell
 # create python env
